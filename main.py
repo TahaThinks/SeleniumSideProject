@@ -24,3 +24,5 @@ for n in range(len(events_times)):
     }
 
 print(events)
+
+driver.close()
