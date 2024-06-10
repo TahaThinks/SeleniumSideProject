@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 url = "https://en.wikipedia.org/wiki/Main_Page"
 
@@ -16,7 +17,13 @@ articles_count = driver.find_element(By.CSS_SELECTOR, value="#articlecount a")
 print(articles_count.text)
 
 #Interact with the Wikipedia page
-articles_count.click()
+# articles_count.click()
 
-driver.close()
+#Get hold of the Search Bar
+search_bar = driver.find_element(By.NAME, value="search")
+
+#Add text to Search Bar
+search_bar.send_keys("Python", Keys.ENTER)
+
+# driver.close()
 
