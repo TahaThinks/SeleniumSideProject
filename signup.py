@@ -19,7 +19,7 @@ first_name = driver.find_element(By.NAME, value="fName")
 last_name = driver.find_element(By.NAME, value="lName")
 email_address = driver.find_element(By.NAME, value="email")
 submit_button = driver.find_element(By.CLASS_NAME, value="btn")
-# Input Date
+# Input Data
 first_name.send_keys(username.split(" ")[0])
 last_name.send_keys(username.split(" ")[1])
 email_address.send_keys(email)
