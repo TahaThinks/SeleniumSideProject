@@ -8,6 +8,12 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 
-#Open Webpage
+#Navigate to Wikipedia
 driver.get(url)
+
+#Get Article Count
+articles_count = driver.find_element(By.CSS_SELECTOR, value="#articlecount a")
+print(articles_count.text)
+
+driver.close()
 
