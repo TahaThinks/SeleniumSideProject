@@ -15,5 +15,8 @@ driver.get(url)
 articles_count = driver.find_element(By.CSS_SELECTOR, value="#articlecount a")
 print(articles_count.text)
 
+#Interact with the Wikipedia page
+articles_count.click()
+
 driver.close()
 
